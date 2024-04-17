@@ -18,21 +18,21 @@ type BlogListItemProps = {
 
 const ResearchItem = ({ post, showTags = true }: BlogListItemProps) => (
   <Box mb={4}>
-    <Link to={post.publisherLink} sx={(t) => ({ fontSize: [1, 1, 1], color: `text`, fontWeight: `bold` })}>
+    <a href={post.publisherLink} sx={(t) => ({ fontSize: [1, 1, 1], color: `text`, fontWeight: `bold` })}>
       {post.title}
-    </Link>
+    </a>
     <br />
     <small>{post.authorsList}</small>
     <p sx={{ color: `secondary`, mt: 1, a: { color: `secondary` }, fontSize: [0, 0, 0] }}>
       <time>{post.publisherName}, {post.yearOfPub} </time>  
       {post.codeUrl && (
         <React.Fragment>
-           -  [<Link to={post.codeUrl}>Code</Link>] 
+           -  [<a href={post.codeUrl}>Code</a>] 
         </React.Fragment>
       )}
       {post.slides && (
         <React.Fragment>
-          -  [<Link to={post.slides}>Slides</Link>] 
+          -  [<a href={post.slides}>Slides</a>] 
         </React.Fragment>
       )}
     </p>

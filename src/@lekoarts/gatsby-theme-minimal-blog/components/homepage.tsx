@@ -56,21 +56,11 @@ const Homepage = ({ posts }: MBHomepageProps) => {
             <br /> <br />
             <Text children={`Julio César`} sx={{ fontSize: [3, 4, 5], fontWeight: `bold`, color: `heading` }} />
             <br /> <br />
-            <Text
-                    style={{ textAlign: 'left'}}
-                    sx={{
-                        fontSize: 1,
-                        display: 'inline',
-                        
-                    }}
-                    >
-                    
+            <Text style={{ textAlign: 'left'}} sx={{fontSize: 1, display: 'inline'}}>
                     Integration Engineer at <a href="https://thirdway.health/" target="_blank">Thirdway Health</a>, 
                     where I lead a small team that mostly focuses on data pipelines and APIs. 
                     Currently a M.Sc. student in Biomedical Engineering 
-                    at <a href="https://uniandes.edu.co/en" target="_blank">Uniandes</a>, 
-                    doing research in AI Drug Design. <br /> <br />
-
+                    at <a href="https://uniandes.edu.co/en" target="_blank">Uniandes</a> researching in AI Drug Design. <br /> <br />
                     Before that, I worked at <a href="https://www.globant.com/">Globant</a> as a Bioscientist, where I was part of the founding team of the <a href="https://www.globant.com/studio/healthcare-life-sciences">Life Sciences Studio</a>, 
                     did research on architectural design and AI in healthcare, and collaborated with  <a href="https://verily.com/">Verily</a> (an Alphabet company) on a <a href="https://fhir.org/">FHIR</a> implementation for Clinical Pathways.
 
@@ -85,21 +75,16 @@ const Homepage = ({ posts }: MBHomepageProps) => {
         </Flex>
       </section>
       <Title text="Research">
-       
       </Title>
-
       <Research posts={researchData} showTags={false}  />
-      <Title text="Latest Posts">
-        <Link to={replaceSlashes(`/${basePath}/${blogPath}`)}>Read all</Link>
+      <Title text="Code">
       </Title>
-     
-      
-     
+      <ul>
+        <li>A</li>
+      </ul>
     </Layout>
   )
 }
-
-
 
 export default Homepage
 

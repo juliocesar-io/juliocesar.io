@@ -19,7 +19,7 @@ type ListingProps = {
 }
 
 const Research = ({ posts, className = ``, showTags = true }: ListingProps) => (
-  <section sx={{ mb: [5, 6, 7] }} className={className}>
+  <section sx={{ }} className={className}>
     {posts.map((post) => (
         <ResearchItem key={post.publisherLink} post={post} showTags={showTags} />
     ))}

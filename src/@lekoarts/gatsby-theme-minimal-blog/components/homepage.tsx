@@ -3,7 +3,7 @@ import { HeadFC, Link } from "gatsby"
 import Layout from "./layout"
 import Title from "@lekoarts/gatsby-theme-minimal-blog/src/components/title"
 import Research from "./research"
-import Code from "./code"
+import CodeHome from "./codeHome"
 import useMinimalBlogConfig from "@lekoarts/gatsby-theme-minimal-blog/src/hooks/use-minimal-blog-config"
 import useSiteMetadata from "@lekoarts/gatsby-theme-minimal-blog/src/hooks/use-site-metadata"
 import { visuallyHidden } from "@lekoarts/gatsby-theme-minimal-blog/src/styles/utils"
@@ -72,7 +72,7 @@ const Homepage = ({ posts }: MBHomepageProps) => {
       <Title text="Research"></Title>
       <Research posts={researchData} showTags={false}  />
       <Title text="Code"></Title>
-      <Code posts={codeData} showTags={false}  />
+      <CodeHome posts={codeData} showTags={false}  />
     </Layout>
   )
 }

@@ -1,7 +1,7 @@
 
 /** @jsx jsx */
 import { jsx } from "theme-ui"
-import CodeItem from "./code-item";
+import CodeHomeItem from "./code-home-item";
 
 
 type ListingProps = {
@@ -14,12 +14,12 @@ type ListingProps = {
   showTags?: boolean
 }
 
-const Code = ({ posts, className = ``, showTags = true }: ListingProps) => (
+const CodeHome = ({ posts, className = ``, showTags = true }: ListingProps) => (
   <section sx={{ }} className={className}>
     {posts.map((post) => (
-        <CodeItem key={post.link} post={post} showTags={showTags} />
+        <CodeHomeItem key={post.link} post={post} showTags={showTags} />
     ))}
   </section>
 )
 
-export default Code
+export default CodeHome

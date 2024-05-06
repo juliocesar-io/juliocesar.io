@@ -1,7 +1,6 @@
 /** @jsx jsx */
 import * as React from "react"
 import { Box, Text, Flex, Image, jsx } from 'theme-ui'
-import { Link } from "gatsby"
 import ReactMarkdown from 'react-markdown';
 
 type BlogListItemProps = {
@@ -13,7 +12,7 @@ type BlogListItemProps = {
   showTags?: boolean
 }
 
-const CodeItem = ({ post, showTags = false }: BlogListItemProps) => (
+const CodeHomeItem = ({ post, showTags = false }: BlogListItemProps) => (
 <Flex>
   <Box mb={4}>
     <a href={post.link} target="_blank">
@@ -36,4 +35,4 @@ const CodeItem = ({ post, showTags = false }: BlogListItemProps) => (
   </Flex>
 )
 
-export default CodeItem
+export default CodeHomeItem

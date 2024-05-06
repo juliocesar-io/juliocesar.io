@@ -9,8 +9,8 @@ const config: GatsbyConfig = {
     // You can also add new values here to query them like usual
     // See all options: https://github.com/LekoArts/gatsby-themes/blob/main/themes/gatsby-theme-minimal-blog/gatsby-config.mjs
     siteTitle: `>`,
-    siteTitleAlt: `Julio Cesar`,
-    siteHeadline: `Julio Cesar`,
+    siteTitleAlt: `Julio César`,
+    siteHeadline: `Julio César`,
     siteUrl: `https://juliocesar.io`,
     siteDescription: ``,
     siteImage: `/banner.jpg`,
@@ -25,7 +25,7 @@ const config: GatsbyConfig = {
       options: {
         navigation: [
           {
-            title: `Poetry`,
+            title: `Blog`,
             slug: `/blog`,
           },
         ],

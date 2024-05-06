@@ -1,19 +1,16 @@
 /** @jsx jsx */
-import { jsx } from "theme-ui"
 import { HeadFC, Link } from "gatsby"
 import Layout from "./layout"
 import Title from "@lekoarts/gatsby-theme-minimal-blog/src/components/title"
-import Listing from "@lekoarts/gatsby-theme-minimal-blog/src/components/listing"
-import List from "./list"
 import Research from "./research"
+import Code from "./code"
 import useMinimalBlogConfig from "@lekoarts/gatsby-theme-minimal-blog/src/hooks/use-minimal-blog-config"
 import useSiteMetadata from "@lekoarts/gatsby-theme-minimal-blog/src/hooks/use-site-metadata"
-import replaceSlashes from "@lekoarts/gatsby-theme-minimal-blog/src/utils/replaceSlashes"
 import { visuallyHidden } from "@lekoarts/gatsby-theme-minimal-blog/src/styles/utils"
 import Seo from "@lekoarts/gatsby-theme-minimal-blog/src/components/seo"
-import { Box, Text, Flex, Image } from 'theme-ui'
-
+import { Box, Text, Flex, Image, jsx } from 'theme-ui'
 import { researchData } from '../../../data/research'
+import { codeData } from '../../../data/code'
 
 
 export type MBHomepageProps = {
@@ -42,7 +39,7 @@ const Homepage = ({ posts }: MBHomepageProps) => {
       <section  sx={{ p: { fontSize: [1, 2, 3], mt: 2 }, variant: `section_hero` }}>
         <Flex>
             <Box p={1} >
-            <Image src="/img/avatar.jpeg" variant="avatar"  sx={{
+            <Image src="/img/file.jpg" variant="avatar"  sx={{
                 width: [180, 180, 210],
                 height: [180, 180, 210],
                 borderRadius: 9999,
@@ -58,15 +55,13 @@ const Homepage = ({ posts }: MBHomepageProps) => {
             <br /> <br />
             <Text style={{ textAlign: 'left'}} sx={{fontSize: 1, display: 'inline'}}>
                     Integration Engineer at <a href="https://thirdway.health/" target="_blank">Thirdway Health</a>, 
-                    where I lead a small team that mostly focuses on data pipelines and APIs. 
+                    where I lead a small team that mostly focuses on scaling APIs for AI agents flows. 
                     Currently a M.Sc. student in Biomedical Engineering 
-                    at <a href="https://uniandes.edu.co/en" target="_blank">Uniandes</a> researching in AI Drug Design. <br /> <br />
-                    Before that, I worked at <a href="https://www.globant.com/">Globant</a> as a Bioscientist, where I was part of the founding team of the <a href="https://www.globant.com/studio/healthcare-life-sciences">Life Sciences Studio</a>, 
-                    did research on architectural design and AI in healthcare, and collaborated with  <a href="https://verily.com/">Verily</a> (an Alphabet company) on a <a href="https://fhir.org/">FHIR</a> implementation for Clinical Pathways.
-
+                    at <a href="https://uniandes.edu.co/en" target="_blank">Uniandes</a> researching in AI Drug Design using Protein LLMs. <br /> <br />
+                    Before that, I worked at <a href="https://www.globant.com/">Globant</a> as a Python/Bioscientist, where I was part of the founding team of the <a href="https://www.globant.com/studio/healthcare-life-sciences" target="_blank">Life Sciences Studio</a>. 
+                    My work included developing medical imaging with <a href="https://www.nvidia.com/en-us/clara/" target="_blank">Nvidia Clara</a>  for hospitals, and collaborating with  <a href="https://verily.com/" target="_blank">Verily</a> (an Alphabet company) on a <a href="https://fhir.org/" >FHIR</a> implementation for Clinical Pathways.
                     <br /> <br />
-
-                   <ul>
+                    <ul>
                     <li> ✉️ <a href="mailto:jc@juliocesar.io">jc@juliocesar.io</a></li>
                     <li> 𝕏 <a href="https://twitter.com/juliocesar_io">juliocesar_io</a></li>
                    </ul>
@@ -74,14 +69,10 @@ const Homepage = ({ posts }: MBHomepageProps) => {
             </Box>
         </Flex>
       </section>
-      <Title text="Research">
-      </Title>
+      <Title text="Research"></Title>
       <Research posts={researchData} showTags={false}  />
-      <Title text="Code">
-      </Title>
-      <ul>
-        <li>A</li>
-      </ul>
+      <Title text="Code"></Title>
+      <Code posts={codeData} showTags={false}  />
     </Layout>
   )
 }

@@ -23,7 +23,8 @@
     "gatsby-plugin-sitemap": "^6.13.1",
     "gatsby-plugin-webpack-statoscope": "^1.0.3",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-markdown": "^9.0.1"
   },
   "devDependencies": {
     "@types/node": "^18.19.13",

@@ -11,6 +11,10 @@ import Seo from "@lekoarts/gatsby-theme-minimal-blog/src/components/seo"
 import { Box, Text, Flex, Image, jsx } from 'theme-ui'
 import { researchData } from '../../../data/research'
 import { codeData } from '../../../data/code'
+import replaceSlashes from "@lekoarts/gatsby-theme-minimal-blog/src/utils/replaceSlashes"
+
+import Listing from "@lekoarts/gatsby-theme-minimal-blog/src/components/listing"
+import List from "@lekoarts/gatsby-theme-minimal-blog/src/components/list"
 
 
 export type MBHomepageProps = {
@@ -73,6 +77,10 @@ const Homepage = ({ posts }: MBHomepageProps) => {
       <Research posts={researchData} showTags={false}  />
       <Title text="Code"></Title>
       <CodeHome posts={codeData} showTags={false}  />
+      <Title text="Latest Posts">
+        <Link to={replaceSlashes(`/${basePath}/${blogPath}`)}>Read all posts</Link>
+      </Title>
+      <Listing posts={posts} showTags={false} />
     </Layout>
   )
 }

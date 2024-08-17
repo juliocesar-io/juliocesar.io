@@ -43,7 +43,7 @@ const Homepage = ({ posts }: MBHomepageProps) => {
       <section  sx={{ p: { fontSize: [1, 2, 3], mt: 2 }, variant: `section_hero` }}>
         <Flex>
             <Box p={1} >
-            <Image src="/img/file.jpg" variant="avatar"  sx={{
+            <Image src="/img/photo.jpg" variant="avatar"  sx={{
                 width: [180, 180, 210],
                 height: [180, 180, 210],
                 borderRadius: 9999,

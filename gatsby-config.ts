@@ -24,20 +24,10 @@ const config: GatsbyConfig = {
       // See the theme's README for all available options
       options: {
         navigation: [
-          {
-            title: `Blog`,
-            slug: `/blog`,
-          },
+
         ],
         externalLinks: [
-          {
-            name: `Google Scholar`,
-            url: `https://scholar.google.com/citations?user=VsNVn08AAAAJ&hl=en`,
-          },
-          {
-            name: `Github`,
-            url: `https://github.com/juliocesar-io`,
-          },
+         
         ],
       },
     },

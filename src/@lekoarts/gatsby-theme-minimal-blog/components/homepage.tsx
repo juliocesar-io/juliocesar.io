@@ -12,10 +12,16 @@ import { Box, Text, Flex, Image, jsx } from 'theme-ui'
 import { researchData } from '../../../data/research'
 import { codeData } from '../../../data/code'
 import replaceSlashes from "@lekoarts/gatsby-theme-minimal-blog/src/utils/replaceSlashes"
-
 import Listing from "@lekoarts/gatsby-theme-minimal-blog/src/components/listing"
-import List from "@lekoarts/gatsby-theme-minimal-blog/src/components/list"
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {
+  faXTwitter,
+  faGithub,
+  faLinkedin,
+  faGoogleScholar,
+  faOrcid
+} from '@fortawesome/free-brands-svg-icons'
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 
 export type MBHomepageProps = {
   posts: {
@@ -55,20 +61,36 @@ const Homepage = ({ posts }: MBHomepageProps) => {
             
             }}/>
             <br /> <br />
-            <Text children={`Julio César`} sx={{ fontSize: [3, 4, 5], fontWeight: `bold`, color: `heading` }} />
+            <Text children={`Julio César Castellanos`} sx={{ fontSize: [3, 4, 5], fontWeight: `bold`, color: `heading` }} />
             <br /> <br />
             <Text style={{ textAlign: 'left'}} sx={{fontSize: 1, display: 'inline'}}>
                     Integration Engineer at <a href="https://thirdway.health/" target="_blank">Thirdway Health</a>, 
                     where I lead a small team that mostly focuses on scaling APIs for AI agents flows. 
                     Currently a M.Sc. student in Biomedical Engineering 
-                    at <a href="https://uniandes.edu.co/en" target="_blank">Uniandes</a> researching in AI Drug Design using Protein LLMs. <br /> <br />
+                    at <a href="https://uniandes.edu.co/en" target="_blank">Uniandes</a> researching in AI Drug Design using Protein Language Models. <br /> <br />
                     Before that, I worked at <a href="https://www.globant.com/">Globant</a> as a Python/Bioscientist, where I was part of the founding team of the <a href="https://www.globant.com/studio/healthcare-life-sciences" target="_blank">Life Sciences Studio</a>. 
                     My work included developing medical imaging with <a href="https://www.nvidia.com/en-us/clara/" target="_blank">Nvidia Clara</a>  for hospitals, and collaborating with  <a href="https://verily.com/" target="_blank">Verily</a> (an Alphabet company) on a <a href="https://fhir.org/" >FHIR</a> implementation for Clinical Pathways.
+
+                    <ul sx={{
+                      listStyleType: 'none',
+                      padding: 0,
+                      margin: 0,
+                      display: 'flex',
+                      gap: 3,
+                      a: { 
+                        textDecoration: 'none',
+                        color: 'inherit',
+                        '&:hover': { opacity: 0.8 }
+                      }
+                    }}>
+                    <li><a href="mailto:jc@juliocesar.io" aria-label="Email"><FontAwesomeIcon icon={faEnvelope} /></a></li>
+                    <li><a href="https://twitter.com/juliocesar_io" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><FontAwesomeIcon icon={faXTwitter} /></a></li>
+                    <li><a href="https://github.com/juliocesar-io" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><FontAwesomeIcon icon={faGithub} /></a></li>
+                    <li><a href="https://www.linkedin.com/in/juliocesar-io/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><FontAwesomeIcon icon={faLinkedin} /></a></li>
+                    <li><a href="https://scholar.google.com/citations?user=VsNVn08AAAAJ&hl=en" target="_blank" aria-label="Google Scholar"><FontAwesomeIcon icon={faGoogleScholar} /></a></li>
+                    <li><a href="https://orcid.org/0000-0003-1547-7197" target="_blank" aria-label="ORCID"><FontAwesomeIcon icon={faOrcid} /></a></li>
+                    </ul>
                     <br /> <br />
-                    <ul>
-                    <li> ✉️ <a href="mailto:jc@juliocesar.io">jc@juliocesar.io</a></li>
-                    <li> 𝕏 <a href="https://twitter.com/juliocesar_io">juliocesar_io</a></li>
-                   </ul>
                 </Text>
             </Box>
         </Flex>

@@ -49,9 +49,9 @@ const Homepage = ({ posts }: MBHomepageProps) => {
       <section  sx={{ p: { fontSize: [1, 2, 3], mt: 2 }, variant: `section_hero` }}>
         <Flex>
             <Box p={1} >
-            <Image src="/img/photo.jpg" variant="avatar"  sx={{
-                width: [180, 180, 210],
-                height: [180, 180, 210],
+            <Image src="/img/me.png" variant="avatar"  sx={{
+                width: [180, 180, 250],
+                height: [180, 180, 250],
                 borderRadius: 9999,
                 float: `left`,
                 marginTop: '110px',
@@ -64,10 +64,11 @@ const Homepage = ({ posts }: MBHomepageProps) => {
             <Text children={`Julio César Castellanos`} sx={{ fontSize: [3, 4, 5], fontWeight: `bold`, color: `heading` }} />
             <br /> <br />
             <Text style={{ textAlign: 'left'}} sx={{fontSize: 1, display: 'inline'}}>
-                    Integration Engineer at <a href="https://thirdway.health/" target="_blank">Thirdway Health</a>, 
-                    where I lead a small team that mostly focuses on scaling APIs for AI agents flows. 
-                    Currently a M.Sc. student in Biomedical Engineering 
-                    at <a href="https://uniandes.edu.co/en" target="_blank">Uniandes</a> researching in AI Drug Design using Protein Language Models. <br /> <br />
+                   
+                    Co-Founder & CEO at <a href="https://fastfold.ai/" target="_blank">Fastfold</a>, building AI agents for biotech and pharma.  Lead Engineer at <a href="https://thirdway.health/" target="_blank">Thirdway Health</a>, 
+                    where I lead a small team scaling voice agents for medical practices.
+                     M.Sc. in Biomedical Engineering 
+                    at <a href="https://uniandes.edu.co/en" target="_blank">Uniandes</a> researching in AI Drug Design with small peptides using Boltz-1, AlphaFold2 and Protein Language Models with LLMs. <br /> <br />
                     Before that, I worked at <a href="https://www.globant.com/">Globant</a> as a Python/Bioscientist, where I was part of the founding team of the <a href="https://www.globant.com/studio/healthcare-life-sciences" target="_blank">Life Sciences Studio</a>. 
                     My work included developing medical imaging with <a href="https://www.nvidia.com/en-us/clara/" target="_blank">Nvidia Clara</a>  for hospitals, and collaborating with  <a href="https://verily.com/" target="_blank">Verily</a> (an Alphabet company) on a <a href="https://fhir.org/" >FHIR</a> implementation for Clinical Pathways.
 
@@ -102,7 +103,7 @@ const Homepage = ({ posts }: MBHomepageProps) => {
       <Title text="Latest Posts">
         <Link to={replaceSlashes(`/${basePath}/${blogPath}`)}>Read all posts</Link>
       </Title>
-      <Listing posts={posts} showTags={false} />
+      <Listing posts={posts} showTags={true} />
     </Layout>
   )
 }

@@ -5,7 +5,7 @@ import { Box, Container, jsx, get } from "theme-ui"
 import { MDXProvider } from "@mdx-js/react"
 import MdxComponents from "@lekoarts/gatsby-theme-minimal-blog/src/components/mdx-components"
 import Header from "./header"
-import Footer from "@lekoarts/gatsby-theme-minimal-blog/src/components/footer"
+import Footer from "./footer"
 import CodeStyles from "@lekoarts/gatsby-theme-minimal-blog/src/styles/code"
 import SkipNavLink from "@lekoarts/gatsby-theme-minimal-blog/src/components/skip-nav"
 

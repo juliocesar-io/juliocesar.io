@@ -61,16 +61,36 @@ const Homepage = ({ posts }: MBHomepageProps) => {
             
             }}/>
             <br /> <br />
-            <Text children={`Julio César Castellanos`} sx={{ fontSize: [3, 4, 5], fontWeight: `bold`, color: `heading` }} />
+            <Text children={`Julio César Castellanos`} sx={{ 
+                fontSize: [3, 4, 5], 
+                fontWeight: `bold`, 
+                color: `heading`,
+                '&::before': {
+                  content: '"|"',
+                  animation: 'blink 1s step-end infinite',
+                  marginRight: '5px',
+                  fontSize: '1.2em'
+                },
+                '@keyframes blink': {
+                  '0%, 100%': { opacity: 1 },
+                  '50%': { opacity: 0 }
+                }
+            }} />
             <br /> <br />
             <Text style={{ textAlign: 'left'}} sx={{fontSize: 1, display: 'inline'}}>
                    
-                    Co-Founder & CEO at <a href="https://fastfold.ai/" target="_blank">Fastfold</a>, building AI agents for biotech and pharma.  Lead Engineer at <a href="https://thirdway.health/" target="_blank">Thirdway Health</a>, 
+                    <span sx={{ 
+                      backgroundColor: '#000', 
+                      padding: '0 4px', 
+                      borderRadius: '4px',
+                      color: '#fff',
+                      a: { color: '#fff' }
+                    }}>Co-Founder & CEO at <a href="https://fastfold.ai/" target="_blank">Fastfold</a></span>, building AI agents for biotech and pharma. ⚛️ Lead Engineer at <a href="https://thirdway.health/" target="_blank">Thirdway Health</a>, 
                     where I lead a small team scaling voice agents for medical practices.
                      M.Sc. in Biomedical Engineering 
-                    at <a href="https://uniandes.edu.co/en" target="_blank">Uniandes</a> researching in AI Drug Design with small peptides using Boltz-1, AlphaFold2 and Protein Language Models with LLMs. <br /> <br />
+                    at <a href="https://uniandes.edu.co/en" target="_blank">Uniandes</a> 🔬 researching in AI Drug Design with small peptides using Boltz-1, AlphaFold2 and Protein Language Models with LLMs. <br /> <br />
                     Before that, I worked at <a href="https://www.globant.com/">Globant</a> as a Python/Bioscientist, where I was part of the founding team of the <a href="https://www.globant.com/studio/healthcare-life-sciences" target="_blank">Life Sciences Studio</a>. 
-                    My work included developing medical imaging with <a href="https://www.nvidia.com/en-us/clara/" target="_blank">Nvidia Clara</a>  for hospitals, and collaborating with  <a href="https://verily.com/" target="_blank">Verily</a> (an Alphabet company) on a <a href="https://fhir.org/" >FHIR</a> implementation for Clinical Pathways.
+                    My work included developing medical imaging with <a href="https://www.nvidia.com/en-us/clara/" target="_blank">Nvidia Clara</a>  🩻 for hospitals, and collaborating with  <a href="https://verily.com/" target="_blank">Verily</a> (an Alphabet company) on a <a href="https://fhir.org/" >FHIR</a> implementation for Clinical Pathways.
 
                     <ul sx={{
                       listStyleType: 'none',

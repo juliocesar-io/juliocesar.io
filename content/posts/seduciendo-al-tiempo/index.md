@@ -8,6 +8,8 @@ hero: './la-mar.jpeg'
 description: La Mar quita, La Mar da – A idílicas almas la potestad, Arrebatar con lirio el mirar, Entregar obtusa luz solar ...
 ---
 
+_Una bella isla, Cartagena_
+
 ![](./la-mar.jpeg)
 
 ### I

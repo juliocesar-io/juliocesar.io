@@ -120,10 +120,10 @@ const Homepage = ({ posts }: MBHomepageProps) => {
       <Research posts={researchData} showTags={false}  />
       <Title text="Code"></Title>
       <CodeHome posts={codeData} showTags={false}  />
-      <Title text="Latest Posts">
+      <Title text="🖋️ Poetry">
         <Link to={replaceSlashes(`/${basePath}/${blogPath}`)}>Read all posts</Link>
       </Title>
-      <Listing posts={posts} showTags={true} />
+      <Listing posts={posts} showTags={false} />
     </Layout>
   )
 }

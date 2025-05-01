@@ -1,9 +1,6 @@
 /** @jsx jsx */
 import * as React from "react"
-import { jsx, Box } from "theme-ui"
-import { Link } from "gatsby"
-import { faEnvelope, faExternalLink } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { Box } from "theme-ui"
 
 type BlogListItemProps = {
   post: {
@@ -21,7 +18,7 @@ type BlogListItemProps = {
 const ResearchItem = ({ post, showTags = true }: BlogListItemProps) => (
   <Box mb={4}>
     <a href={post.publisherLink} sx={(t) => ({ fontSize: [1, 1, 1], color: `text` })}>
-      {post.title} <FontAwesomeIcon style={{ fontSize: '0.7em' }} icon={faExternalLink} />
+      {post.title}
     </a>
     <br />
     <small>{post.authorsList}</small>

@@ -28,7 +28,11 @@ const Layout = ({ children, className = `` }: LayoutProps) => (
       })}
     />
     <SkipNavLink>Skip to content</SkipNavLink>
-    <Container>
+    <Container 
+    sx={{
+      maxWidth: '680px',
+    }}
+    >
       <Header />
       <Box id="skip-nav" as="main" variant="layout.main" sx={{ ...CodeStyles }} className={className}>
         {children}

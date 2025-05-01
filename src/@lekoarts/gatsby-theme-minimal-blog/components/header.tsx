@@ -5,7 +5,7 @@ import ColorModeToggle from "@lekoarts/gatsby-theme-minimal-blog/src/components/
 import Navigation from "@lekoarts/gatsby-theme-minimal-blog/src/components/navigation"
 import HeaderTitle from "@lekoarts/gatsby-theme-minimal-blog/src/components/header-title"
 import HeaderExternalLinks from "@lekoarts/gatsby-theme-minimal-blog/src/components/header-external-links"
-
+import { Text } from "theme-ui"
 const Header = () => {
   const { navigation: nav } = useMinimalBlogConfig()
 
@@ -13,24 +13,24 @@ const Header = () => {
     <header sx={{ mb: [5, 6], marginBottom: `0px !important`}}>
       <Flex sx={{ alignItems: `center`, justifyContent: `space-between` }}>
         <HeaderTitle />
+        <Text children={`Julio César`} sx={{ 
+                fontSize: [3, 4, 4], 
+                fontWeight: `bold`, 
+                color: `heading`,
+                '&::before': {
+                  content: '"|"',
+                  animation: 'blink 1s step-end infinite',
+                  marginRight: '5px',
+                  fontSize: '1.2em'
+                },
+                '@keyframes blink': {
+                  '0%, 100%': { opacity: 1 },
+                  '50%': { opacity: 0 }
+                }
+            }} />
         <ColorModeToggle />
       </Flex>
-      <div
-        sx={{
-          boxSizing: `border-box`,
-          display: `flex`,
-          variant: `dividers.bottom`,
-          alignItems: `center`,
-          justifyContent: `space-between`,
-
-          color: `secondary`,
-          a: { color: `secondary`, ":hover": { color: `heading` } },
-          flexFlow: `wrap`,
-        }}
-      >
-        <Navigation nav={nav} />
-        <HeaderExternalLinks />
-      </div>
+      <br />
     </header>
   )
 }

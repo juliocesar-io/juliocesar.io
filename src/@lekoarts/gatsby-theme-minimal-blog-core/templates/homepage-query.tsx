@@ -7,7 +7,7 @@ export { Head }
 
 export const query = graphql`
   query ($formatString: String!) {
-    allPost(sort: { date: DESC }, limit: 10) {
+    allPost(sort: { date: DESC }, limit: 10 ) {
       nodes {
         slug
         title

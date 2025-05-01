@@ -17,8 +17,8 @@ const CodeHomeItem = ({ post, showTags = false }: BlogListItemProps) => (
   <Box mb={4}>
     <a href={post.link} target="_blank">
     <Image src={post.img} variant="avatar"  sx={{
-                width: [150, 150, 150],
-                height: [150, 150, 150],
+                width: [130, 130, 130],
+                height: [130, 130, 130],
               
                 float: `left`,
                 

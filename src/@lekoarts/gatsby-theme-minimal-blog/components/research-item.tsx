@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import * as React from "react"
-import { Box } from "theme-ui"
+import { jsx, Box } from "theme-ui"
 
 type BlogListItemProps = {
   post: {

@@ -15,13 +15,10 @@ import replaceSlashes from "@lekoarts/gatsby-theme-minimal-blog/src/utils/replac
 import Listing from "./listing"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
-  faXTwitter,
+
   faGithub,
-  faLinkedin,
-  faGoogleScholar,
-  faOrcid,
 } from '@fortawesome/free-brands-svg-icons'
-import { faEnvelope, faExternalLink } from '@fortawesome/free-solid-svg-icons'
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 
 export type MBHomepageProps = {
   posts: {

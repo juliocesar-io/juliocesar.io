@@ -8,6 +8,7 @@ import Header from "./header"
 import Footer from "./footer"
 import CodeStyles from "@lekoarts/gatsby-theme-minimal-blog/src/styles/code"
 import SkipNavLink from "@lekoarts/gatsby-theme-minimal-blog/src/components/skip-nav"
+import { Analytics } from "@vercel/analytics/react"
 
 type LayoutProps = { children: React.ReactNode; className?: string }
 
@@ -36,6 +37,7 @@ const Layout = ({ children, className = `` }: LayoutProps) => (
       <Header />
       <Box id="skip-nav" as="main" variant="layout.main" sx={{ ...CodeStyles }} className={className}>
         {children}
+        <Analytics />
       </Box>
       <Footer />
     </Container>

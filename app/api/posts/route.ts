@@ -1,23 +1,12 @@
 import { NextResponse } from "next/server";
 
 import { getHomeEntries } from "@/lib/content";
-import { formatViews } from "@/lib/format";
-import redis from "@/lib/redis";
+import { enrichEntriesWithViews } from "@/lib/views";
 
-type Views = Record<string, string>;
+export const dynamic = "force-dynamic";
 
 export async function GET() {
-  const entries = await getHomeEntries();
-  const allViews: Views | null = redis ? await redis.hgetall("views") : null;
-
-  const enriched = entries.map((entry) => {
-    const views = Number(allViews?.[entry.id] ?? 0);
-    return {
-      ...entry,
-      views,
-      viewsFormatted: formatViews(views),
-    };
-  });
+  const enriched = await enrichEntriesWithViews(await getHomeEntries());
 
   return NextResponse.json({ entries: enriched });
 }

@@ -1,15 +1,11 @@
 import { getHomeEntries } from "@/lib/content";
-import { formatViews } from "@/lib/format";
 import { Posts } from "@/app/posts";
+import { enrichEntriesWithViews } from "@/lib/views";
 
 export const revalidate = 60;
 
 export default async function HomePage() {
-  const entries = (await getHomeEntries()).map((entry) => ({
-    ...entry,
-    views: 0,
-    viewsFormatted: formatViews(0),
-  }));
+  const entries = await enrichEntriesWithViews(await getHomeEntries());
 
   return <Posts entries={entries} />;
 }

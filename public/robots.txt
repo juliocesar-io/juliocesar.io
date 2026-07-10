@@ -1,0 +1,6 @@
+User-agent: *
+
+sitemap: https://juliocesar.io/sitemap.xml
+User-agent: *
+
+sitemap: https://juliocesar.io/sitemap-index.xml

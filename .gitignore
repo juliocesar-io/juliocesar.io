@@ -62,7 +62,18 @@ typings/
 
 .cache
 **/.cache
-public
+public/*
+!public/robots.txt
+!public/site.webmanifest
+!public/favicon.ico
+!public/favicon-16x16.png
+!public/favicon-32x32.png
+!public/apple-touch-icon.png
+!public/android-chrome-192x192.png
+!public/android-chrome-512x512.png
+!public/static/
+public/static/*
+!public/static/julio-avatar.png
 .next
 
 .idea

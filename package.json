@@ -1,43 +1,38 @@
 {
   "private": false,
   "name": "juliocesar-io",
-  "description": "Julio Cesar's personal blog",
+  "description": "Julio César's personal blog",
   "version": "1.0.0",
-  "author": "Julio Cesar",
+  "author": "Julio César",
   "license": "0BSD",
-  "starter-name": "gatsby-starter-minimal-blog",
+  "packageManager": "pnpm@11.5.2",
+  "engines": {
+    "node": ">=26.0.0",
+    "pnpm": ">=11.0.0"
+  },
   "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "develop:cypress": "cross-env CYPRESS_SUPPORT=y yarn develop",
-    "build:cypress": "cross-env CYPRESS_SUPPORT=y yarn build",
-    "start": "gatsby develop",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^6.6.0",
-    "@fortawesome/free-brands-svg-icons": "^6.6.0",
-    "@fortawesome/free-solid-svg-icons": "^6.6.0",
-    "@fortawesome/react-fontawesome": "^0.2.2",
-    "@lekoarts/gatsby-theme-minimal-blog": "^6.2.1",
-    "@vercel/analytics": "^1.5.0",
-    "gatsby": "^5.13.3",
-    "gatsby-plugin-feed": "^5.13.1",
-    "gatsby-plugin-fontawesome-css": "^1.2.0",
-    "gatsby-plugin-manifest": "^5.13.1",
-    "gatsby-plugin-sitemap": "^6.13.1",
-    "gatsby-plugin-webpack-statoscope": "^1.0.3",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-markdown": "^9.0.1"
+    "@mdx-js/react": "^3.1.1",
+    "@next/mdx": "^16.2.10",
+    "@upstash/redis": "^1.38.0",
+    "@vercel/analytics": "^2.0.1",
+    "@vercel/speed-insights": "^2.0.0",
+    "gray-matter": "^4.0.3",
+    "next": "^16.2.10",
+    "next-mdx-remote": "^6.0.0",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
+    "swr": "^2.4.2"
   },
   "devDependencies": {
-    "@types/node": "^18.19.13",
-    "@types/react": "^18.2.51",
-    "@types/react-dom": "^18.2.18",
-    "ajv": "^8.17.1",
-    "cross-env": "^7.0.3",
-    "typescript": "^5.3.3"
+    "@types/node": "^26.1.1",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "typescript": "^5.9.3"
   }
 }

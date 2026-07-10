@@ -63,9 +63,12 @@ typings/
 .cache
 **/.cache
 public
+.next
 
 .idea
 .vscode
 .DS_Store
 
 package-lock.json
+.vercel
+.env*

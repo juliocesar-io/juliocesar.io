@@ -8,9 +8,7 @@ hero: './la-mar.jpeg'
 description: La Mar quita, La Mar da – A idílicas almas la potestad, Arrebatar con lirio el mirar, Entregar obtusa luz solar ...
 ---
 
-_Una bella isla, Cartagena_
-
-![](./la-mar.jpeg)
+![Una bella isla, Cartagena](./la-mar.jpeg)
 
 ### I
 
@@ -84,7 +82,5 @@ Cantar para _ti_ <br/>
 Una melodía que sujete la libertad <br/>
 Una tan serena - <br/>
 como el recuerdo del _unisono_ de la planta de tus pies y tus sandalias. 
-
----
 <br/>
 <br/>

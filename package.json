@@ -4,10 +4,10 @@
   "description": "Julio César's personal blog",
   "version": "1.0.0",
   "author": "Julio César",
-  "license": "0BSD",
+  "license": "MIT",
   "packageManager": "pnpm@11.5.2",
   "engines": {
-    "node": ">=26.0.0",
+    "node": "24.x",
     "pnpm": ">=11.0.0"
   },
   "scripts": {

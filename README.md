@@ -12,7 +12,7 @@ Personal blog built with Next.js.
 
 ## Requirements
 
-- Node.js `26+` (see `.nvmrc`)
+- Node.js `24.x` (see `.nvmrc`)
 - `pnpm` `11+`
 
 ## Run Locally
